@@ -8,5 +8,6 @@
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer;
 
 - (void)sizeToFitContent;
+- (CGFloat)heightForText:(NSAttributedString *)text;
 
 @end

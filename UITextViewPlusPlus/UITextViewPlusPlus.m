@@ -34,6 +34,13 @@
     self.frame = frame;
 }
 
+- (CGFloat)heightForText:(NSAttributedString *)text
+{
+    UITextViewPlusPlus *view = [[UITextViewPlusPlus alloc] initWithFrame:self.frame];
+    view.attributedText = text;
+    return view.frame.size.height;
+}
+
 - (void)setAttributedText:(NSAttributedString *)attributedText
 {
     NSMutableAttributedString *text = [attributedText mutableCopy];
