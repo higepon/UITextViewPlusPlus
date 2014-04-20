@@ -67,9 +67,46 @@
 {
     NSLog(@"tapped");
 
-    if ([self.delegate respondsToSelector:@selector(tappedUrl:url:)]) {
+    if (![self.delegate respondsToSelector:@selector(tappedUrl:url:)]) {
+        return;
+    }
+
+    UITextView *textView = (UITextView *)recognizer.view;
+    NSLayoutManager *layoutManager = textView.layoutManager;
+    CGPoint location = [recognizer locationInView:textView];
+    location.x -= textView.textContainerInset.left;
+    location.y -= textView.textContainerInset.top;
+
+    NSLog(@"location: %@", NSStringFromCGPoint(location));
+
+    // Find the character that's been tapped on
+
+    NSUInteger characterIndex;
+    characterIndex = [layoutManager characterIndexForPoint:location
+                                           inTextContainer:textView.textContainer
+                  fractionOfDistanceBetweenInsertionPoints:NULL];
+
+    if (characterIndex < textView.textStorage.length) {
+
+        NSRange range;
+        NSDictionary *attributes = [textView.textStorage attributesAtIndex:characterIndex effectiveRange:&range];
+        NSLog(@"%@, %@", attributes, NSStringFromRange(range));
+        if ([attributes objectForKey:@"Link"]) {
+            NSLog(@"Link index=%d", characterIndex);
+            for (NSArray* rangeAndUrl in _rangeAndUrls) {
+                NSRange range = [[rangeAndUrl objectAtIndex:0] rangeValue];
+                NSLog(@"found in range %d", range.location);
+                if (NSLocationInRange(characterIndex, range)) {
+                    NSLog(@"Url=%@", rangeAndUrl[1]);
+                    [self.delegate tappedUrl:self url:rangeAndUrl[1]];
+                    return;
+                }
+            }
+        }
+
+
         // sampleMethod1を呼び出す
-        [self.delegate tappedUrl:self url:[NSURL URLWithString:@"http://yahoooco.jp"]];
+
     }
 
 }
