@@ -19,6 +19,7 @@
 		B39F1417190440B90094F972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39F13FF190440B90094F972 /* UIKit.framework */; };
 		B39F141F190440B90094F972 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B39F141D190440B90094F972 /* InfoPlist.strings */; };
 		B39F1421190440B90094F972 /* UITextViewPlusPlusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B39F1420190440B90094F972 /* UITextViewPlusPlusTests.m */; };
+		B39F142C190441410094F972 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39F142B190441410094F972 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		B39F141C190440B90094F972 /* UITextViewPlusPlusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UITextViewPlusPlusTests-Info.plist"; sourceTree = "<group>"; };
 		B39F141E190440B90094F972 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B39F1420190440B90094F972 /* UITextViewPlusPlusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextViewPlusPlusTests.m; sourceTree = "<group>"; };
+		B39F142A190441410094F972 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B39F142B190441410094F972 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		B39F1401190440B90094F972 /* UITextViewPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				B39F142A190441410094F972 /* ViewController.h */,
+				B39F142B190441410094F972 /* ViewController.m */,
 				B39F140A190440B90094F972 /* AppDelegate.h */,
 				B39F140B190440B90094F972 /* AppDelegate.m */,
 				B39F140D190440B90094F972 /* Images.xcassets */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39F142C190441410094F972 /* ViewController.m in Sources */,
 				B39F140C190440B90094F972 /* AppDelegate.m in Sources */,
 				B39F1408190440B90094F972 /* main.m in Sources */,
 			);
