@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368FF4F29DA5A86F857E002A /* UITextViewPlusPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 368FF26539FAC395BEF79B15 /* UITextViewPlusPlus.m */; };
 		B39F13FC190440B90094F972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39F13FB190440B90094F972 /* Foundation.framework */; };
 		B39F13FE190440B90094F972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39F13FD190440B90094F972 /* CoreGraphics.framework */; };
 		B39F1400190440B90094F972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39F13FF190440B90094F972 /* UIKit.framework */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		368FF18F8EF29F491D4045E2 /* UITextViewPlusPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewPlusPlus.h; sourceTree = "<group>"; };
+		368FF26539FAC395BEF79B15 /* UITextViewPlusPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewPlusPlus.m; sourceTree = "<group>"; };
 		B39F13F8190440B90094F972 /* UITextViewPlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextViewPlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39F13FB190440B90094F972 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B39F13FD190440B90094F972 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				B39F140B190440B90094F972 /* AppDelegate.m */,
 				B39F140D190440B90094F972 /* Images.xcassets */,
 				B39F1402190440B90094F972 /* Supporting Files */,
+				368FF26539FAC395BEF79B15 /* UITextViewPlusPlus.m */,
+				368FF18F8EF29F491D4045E2 /* UITextViewPlusPlus.h */,
 			);
 			path = UITextViewPlusPlus;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				B39F142C190441410094F972 /* ViewController.m in Sources */,
 				B39F140C190440B90094F972 /* AppDelegate.m in Sources */,
 				B39F1408190440B90094F972 /* main.m in Sources */,
+				368FF4F29DA5A86F857E002A /* UITextViewPlusPlus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
