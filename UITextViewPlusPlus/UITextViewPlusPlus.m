@@ -7,7 +7,6 @@
 
 @implementation UITextViewPlusPlus {
     NSMutableArray *_rangeAndUrls;
-
 }
 
 @synthesize delegate;
@@ -22,7 +21,6 @@
         self.clipsToBounds = YES;
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];
         [self addGestureRecognizer:tapRecognizer];
-
     }
     return self;
 }
