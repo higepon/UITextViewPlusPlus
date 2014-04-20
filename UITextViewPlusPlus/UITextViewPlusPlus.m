@@ -14,7 +14,10 @@
 {
     self = [super initWithFrame:frame textContainer:textContainer];
     if (self) {
-
+        // top, left, bottom, right
+        self.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        self.layer.cornerRadius = 3.0f;
+        self.clipsToBounds = YES;
     }
     return self;
 }
