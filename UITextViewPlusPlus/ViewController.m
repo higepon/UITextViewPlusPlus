@@ -24,6 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 50, 280, 200)];
     _textView.backgroundColor = [UIColor grayColor];
+    _textView.textContainerInset = UIEdgeInsetsMake(70, 70, 0, 0);
     _urlRanges = [NSMutableArray arrayWithCapacity:0];
 
     NSString *text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe";
