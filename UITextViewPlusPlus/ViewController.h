@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class UITextViewPlusPlus;
+
 @interface ViewController : UIViewController
+
+- (void)tappedUrl:(UITextViewPlusPlus *)view url:(NSURL *)url;
 
 @end

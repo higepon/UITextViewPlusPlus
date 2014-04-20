@@ -10,6 +10,8 @@
 
 }
 
+@synthesize delegate;
+
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer
 {
     self = [super initWithFrame:frame textContainer:textContainer];
@@ -64,6 +66,12 @@
 - (void)textTapped:(UITapGestureRecognizer *)recognizer
 {
     NSLog(@"tapped");
+
+    if ([self.delegate respondsToSelector:@selector(tappedUrl:url:)]) {
+        // sampleMethod1を呼び出す
+        [self.delegate tappedUrl:self url:[NSURL URLWithString:@"http://yahoooco.jp"]];
+    }
+
 }
 
 @end

@@ -18,7 +18,7 @@
 - remove warnings
  */
 
-@interface ViewController ()
+@interface ViewController () <UITextViewPlusPlusDelegate>
 
 @end
 
@@ -44,6 +44,7 @@
 
     _textViewPlus = [[UITextViewPlusPlus alloc] initWithFrame:CGRectMake(5, 200, 280, 200)];
     _textViewPlus.backgroundColor = [UIColor grayColor];
+    _textViewPlus.delegate = self;
     [self.view addSubview:_textViewPlus];
     _textViewPlus.text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo";
 
@@ -136,6 +137,11 @@
         ///if ([attributes objectForKey:...)] //make a network call, load a cat Pic, etc
 
     }
+}
+
+- (void)tappedUrl:(UITextViewPlusPlus *)view url:(NSURL *)url
+{
+    NSLog(@"protocol url=%@", url);
 }
 
 - (void)didReceiveMemoryWarning
