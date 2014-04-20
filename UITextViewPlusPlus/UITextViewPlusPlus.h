@@ -3,10 +3,10 @@
 // Copyright (c) 2014 Higepon Taro Minowa. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface UITextViewPlusPlus : UITextView
 
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer;
+
+- (void)sizeToFitContent;
 
 @end
