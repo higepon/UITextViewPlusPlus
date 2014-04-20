@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UITextViewPlusPlus.h"
 
 /*
 
@@ -23,6 +24,7 @@
 
 @implementation ViewController {
     UITextView *_textView;
+    UITextViewPlusPlus *_textViewPlus;
     NSMutableArray *_urlRanges;
 }
 
@@ -31,7 +33,7 @@
     [super viewDidLoad];
     //[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UIDisableLegacyTextView"];
     self.view.backgroundColor = [UIColor whiteColor];
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 50, 280, 200)];
+    _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, 50, 280, 200)];
     _textView.backgroundColor = [UIColor grayColor];
     // top, left, bottom, right
     _textView.textContainerInset = UIEdgeInsetsMake(70, 70, 0, 0);
@@ -39,6 +41,11 @@
     _textView.clipsToBounds = YES;
 
     _urlRanges = [NSMutableArray arrayWithCapacity:0];
+
+    _textViewPlus = [[UITextViewPlusPlus alloc] initWithFrame:CGRectMake(5, 200, 280, 200)];
+    _textViewPlus.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:_textViewPlus];
+    _textViewPlus.text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo";
 
     NSString *text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo";
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text attributes:nil];
