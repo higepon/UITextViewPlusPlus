@@ -8,6 +8,15 @@
 
 #import "ViewController.h"
 
+/*
+
+- Extract class
+- define delegate
+- adjust size
+- return height
+
+ */
+
 @interface ViewController ()
 
 @end
