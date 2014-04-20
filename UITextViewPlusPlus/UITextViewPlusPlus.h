@@ -10,13 +10,11 @@
 - (void)tappedUrl:(UITextViewPlusPlus *)view url:(NSURL *)url;
 @end
 
-
 @interface UITextViewPlusPlus : UITextView
 
 @property id<UITextViewPlusPlusDelegate, UITextViewDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer;
-
 - (void)sizeToFitContent;
 - (CGFloat)heightForText:(NSAttributedString *)text;
 
