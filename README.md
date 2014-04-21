@@ -4,7 +4,7 @@ This is UITextView with
 - Automatically resize hight
 - Roundded corner and right paddings
 
-
+![screenshot](https://raw.githubusercontent.com/higepon/UITextViewPlusPlus/master/screen.png)
 ## How To Install
 Copy UITextViewPlusPlus.h and .m to your project.
 
