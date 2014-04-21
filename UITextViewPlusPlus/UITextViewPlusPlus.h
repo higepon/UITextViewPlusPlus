@@ -12,7 +12,7 @@
 
 @interface UITextViewPlusPlus : UITextView
 
-@property id<UITextViewPlusPlusDelegate, UITextViewDelegate> delegate;
+@property id<UITextViewPlusPlusDelegate> urlDelegate;
 
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer;
 - (void)sizeToFitContent;

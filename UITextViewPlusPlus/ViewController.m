@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _textViewPlus = [[UITextViewPlusPlus alloc] initWithFrame:CGRectMake(5, 200, 280, 200)];
     _textViewPlus.backgroundColor = [UIColor grayColor];
-    _textViewPlus.delegate = self;
+    _textViewPlus.urlDelegate = self;
     [self.view addSubview:_textViewPlus];
     _textViewPlus.text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo";
 }

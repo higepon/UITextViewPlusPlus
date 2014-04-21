@@ -9,7 +9,7 @@
     NSMutableArray *_rangeAndUrls;
 }
 
-@synthesize delegate;
+@synthesize urlDelegate;
 
 - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer
 {
@@ -62,7 +62,7 @@
 
 - (void)textTapped:(UITapGestureRecognizer *)recognizer
 {
-    if (![self.delegate respondsToSelector:@selector(tappedUrl:url:)]) {
+    if (![self.urlDelegate respondsToSelector:@selector(tappedUrl:url:)]) {
         return;
     }
 
@@ -78,7 +78,7 @@
         for (NSArray* rangeAndUrl in _rangeAndUrls) {
             NSRange range = [rangeAndUrl[0] rangeValue];
             if (NSLocationInRange(characterIndex, range)) {
-                [self.delegate tappedUrl:self url:rangeAndUrl[1]];
+                [self.urlDelegate tappedUrl:self url:rangeAndUrl[1]];
                 return;
             }
         }
