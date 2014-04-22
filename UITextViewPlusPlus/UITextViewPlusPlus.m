@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame textContainer:textContainer];
     if (self) {
         // top, left, bottom, right
-        self.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        self.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
         self.layer.cornerRadius = 3.0f;
         self.clipsToBounds = YES;
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];
