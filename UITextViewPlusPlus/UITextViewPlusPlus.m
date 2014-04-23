@@ -38,7 +38,12 @@
 {
     UITextViewPlusPlus *view = [[UITextViewPlusPlus alloc] initWithFrame:self.frame];
     view.attributedText = text;
-    return view.frame.size.height;
+    CGFloat height = view.frame.size.height;
+    height += self.textContainerInset.top;
+    height += self.textContainerInset.bottom;
+    height += self.contentInset.top;
+    height += self.contentInset.bottom;
+    return height;
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText
