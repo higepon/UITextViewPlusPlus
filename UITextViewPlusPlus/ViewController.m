@@ -25,7 +25,7 @@
     _textViewPlus.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1.0];
     _textViewPlus.urlDelegate = self;
     [self.view addSubview:_textViewPlus];
-    _textViewPlus.text = @"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo";
+    _textViewPlus.attributedText = [[NSAttributedString alloc] initWithString:@"This is super cool. http://twitter.com/ and this is also good http://facebook.com/ hehe Yahooooooopo"];
 }
 
 - (void)tappedUrl:(UITextViewPlusPlus *)view url:(NSURL *)url

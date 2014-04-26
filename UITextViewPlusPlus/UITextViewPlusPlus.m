@@ -29,21 +29,15 @@
 {
     CGSize size = [self sizeThatFits:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)];
     CGRect frame = self.frame;
-    frame.size.width = size.width;
+    frame.size.width = self.frame.size.width;
     frame.size.height = size.height;
     self.frame = frame;
 }
 
 - (CGFloat)heightForText:(NSAttributedString *)text
 {
-    UITextViewPlusPlus *view = [[UITextViewPlusPlus alloc] initWithFrame:self.frame];
-    view.attributedText = text;
-    CGFloat height = view.frame.size.height;
-    height += self.textContainerInset.top;
-    height += self.textContainerInset.bottom;
-    height += self.contentInset.top;
-    height += self.contentInset.bottom;
-    return height;
+    self.attributedText = text;
+    return self.frame.size.height;
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText
@@ -58,7 +52,7 @@
             NSRange range = [match range];
             [_rangeAndUrls addObject:@[[NSValue valueWithRange:range], url]];
             [text setAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}
-                                    range:range];
+                          range:range];
         }
     }
     [super setAttributedText:text];
@@ -76,8 +70,8 @@
     location.x -= textView.textContainerInset.left;
     location.y -= textView.textContainerInset.top;
     NSUInteger characterIndex = [textView.layoutManager characterIndexForPoint:location
-                                           inTextContainer:textView.textContainer
-                  fractionOfDistanceBetweenInsertionPoints:NULL];
+                                                               inTextContainer:textView.textContainer
+                                      fractionOfDistanceBetweenInsertionPoints:NULL];
 
     if (characterIndex < textView.textStorage.length) {
         for (NSArray* rangeAndUrl in _rangeAndUrls) {
